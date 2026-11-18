@@ -7,3 +7,7 @@ MeetingBot is a standalone meeting protocol.
 - API providers are OpenAI-compatible endpoints configured by the operator.
 - Mock mode is fully local and deterministic.
 - The meeting core does not execute shell commands or modify project files. Optional Agent tools (fs.write and python.run) and build-gate can execute commands or modify files only after the owner selects a non-read-only permission mode; the default mode is read-only.
+
+## License
+
+MeetingBot is source-available under the PolyForm Noncommercial License 1.0.0. See `LICENSE`. Commercial use requires a separate written license; see `COMMERCIAL-LICENSE.md`.

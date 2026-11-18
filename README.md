@@ -852,4 +852,4 @@ This is not proof that every meeting saves money. It is a measurable tradeoff.
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+Source-available under the **PolyForm Noncommercial License 1.0.0**. Personal, research, educational, charitable, public-sector, and internal noncommercial use is permitted. Commercial use requires a separate written license from the copyright holder. This is not an OSI-approved open-source license. See [LICENSE](LICENSE) and [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md).
