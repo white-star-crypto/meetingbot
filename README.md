@@ -1,4 +1,35 @@
-# MeetingBot
+# 合议 MeetingBot
+
+多模型 AI 会议：多个模型独立提案、匿名互评、投票，最后由主 Bot 汇总成一份可执行的决定。Windows 本地优先，源码公开。
+
+> **协议：PolyForm Noncommercial License 1.0.0**
+> 非商业用途免费；**商业使用需要单独书面授权**。这不是 MIT，也不是 OSI 开源协议。详见 [LICENSE](LICENSE) 和 [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md)。
+
+## 中文简介
+
+合议不是让一个模型直接给答案。它让多个模型先各自独立提案，再匿名交叉评审、多维投票，选出主 Bot 汇总；主 Bot 可以采纳、基于硬性理由否决，或合并少数派方案。
+
+适合：方案讨论、架构评审、代码/设计评审、决策对比。
+
+- **合议协作**：所有选中模型参与提案、评审、投票
+- **分工制**：按推理、代码、视觉、写作等领域分工
+- **按需点将**：根据任务选出主模型和评审模型
+- **群聊讨论**：轻量多角色讨论，可转成正式合议
+
+本版 `1.0.0` 未签名，也没有自动更新；这是干净的 portable 版本。
+
+## 下载与安装
+
+- [GitHub Releases](https://github.com/white-star-crypto/meetingbot/releases/tag/v1.0.0)
+- [Gitee Releases](https://gitee.com/uchiha-li-ga/meetingbot/releases/tag/v1.0.0)
+
+Windows：下载 portable zip，解压后双击 `合议.exe`。未签名版本可能触发 SmartScreen，选择「更多信息 → 仍要运行」。应用不内置 API Key，需要自己配置模型服务。
+
+校验下载文件：[SHA256SUMS.txt](https://github.com/white-star-crypto/meetingbot/releases/tag/v1.0.0)。
+
+---
+
+## English
 
 [github.com/white-star-crypto/meetingbot](https://github.com/white-star-crypto/meetingbot)
 
