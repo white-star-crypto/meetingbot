@@ -1,0 +1,126 @@
+{
+  "name": "example-live-meeting",
+  "maxTokens": 2200,
+  "temperature": 0.65,
+  "outDir": "runs",
+  "selection": {
+    "count": 2,
+    "maxCostTier": 3,
+    "requireTags": [],
+    "include": [],
+    "exclude": []
+  },
+  "roster": [
+    {
+      "id": "deepseek",
+      "label": "DeepSeek",
+      "provider": "openai",
+      "baseUrl": "https://api.deepseek.com",
+      "model": "deepseek-chat",
+      "apiKeyEnv": "DEEPSEEK_API_KEY",
+      "enabled": true,
+      "tags": [
+        "code",
+        "reasoning",
+        "architecture",
+        "cheap"
+      ],
+      "costTier": 2,
+      "qualityTier": 4
+    },
+    {
+      "id": "glm",
+      "label": "GLM",
+      "provider": "openai",
+      "baseUrl": "https://open.bigmodel.cn/api/paas/v4",
+      "model": "glm-4.7-flash",
+      "apiKeyEnv": "GLM_API_KEY",
+      "enabled": true,
+      "tags": [
+        "cheap",
+        "reasoning",
+        "chinese"
+      ],
+      "costTier": 1,
+      "qualityTier": 3
+    },
+    {
+      "id": "qwen",
+      "label": "Qwen",
+      "provider": "openai",
+      "baseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+      "model": "qwen-plus",
+      "apiKeyEnv": "DASHSCOPE_API_KEY",
+      "enabled": true,
+      "tags": [
+        "design",
+        "multimodal",
+        "chinese"
+      ],
+      "costTier": 2,
+      "qualityTier": 4
+    },
+    {
+      "id": "mimo",
+      "label": "MiMo",
+      "provider": "openai",
+      "baseUrl": "https://api.xiaomimimo.com/v1",
+      "model": "mimo-v2.6-flash",
+      "apiKeyEnv": "MIMO_API_KEY",
+      "enabled": true,
+      "tags": [
+        "cheap",
+        "design",
+        "long-context"
+      ],
+      "costTier": 1,
+      "qualityTier": 3
+    },
+    {
+      "id": "doubao",
+      "label": "Doubao",
+      "provider": "openai",
+      "baseUrl": "https://ark.cn-beijing.volces.com/api/v3",
+      "model": "doubao-seed-2-1-pro-260628",
+      "apiKeyEnv": "ARK_API_KEY",
+      "enabled": false,
+      "tags": [
+        "design",
+        "multimodal",
+        "vision",
+        "chinese"
+      ],
+      "costTier": 3,
+      "qualityTier": 4
+    },
+    {
+      "id": "wenxin",
+      "label": "Wenxin",
+      "provider": "openai",
+      "baseUrl": "https://qianfan.baidubce.com/v2",
+      "model": "ernie-5.1",
+      "apiKeyEnv": "QIANFAN_API_KEY",
+      "noThink": true,
+      "enabled": true,
+      "tags": [
+        "chinese",
+        "reasoning"
+      ],
+      "costTier": 3,
+      "qualityTier": 3
+    }
+  ],
+  "quorum": {
+    "min": 2
+  },
+  "mcp": {
+    "enabled": false,
+    "timeoutMs": 20000,
+    "servers": []
+  },
+  "cache": {
+    "enabled": true,
+    "ttlDays": 7,
+    "dir": "state/cache"
+  }
+}

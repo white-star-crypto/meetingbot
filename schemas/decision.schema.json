@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MeetingBot decision v1",
+  "type": "object",
+  "required": [
+    "schema",
+    "winner",
+    "foreman",
+    "adopt",
+    "veto",
+    "canBuild",
+    "blocked",
+    "ownerGate",
+    "quorum",
+    "buildGate"
+  ],
+  "properties": {
+    "schema": {
+      "const": "meetingbot/decision/v1"
+    },
+    "winner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "foreman": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "adopt": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "veto": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "proposal",
+          "category",
+          "reason"
+        ],
+        "properties": {
+          "proposal": {
+            "type": "string"
+          },
+          "category": {
+            "enum": [
+              "safety",
+              "scope",
+              "budget",
+              "infeasible",
+              "conflict"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "canBuild": {
+      "type": "boolean"
+    },
+    "blocked": {
+      "type": "boolean"
+    },
+    "ownerGate": {
+      "type": "boolean"
+    },
+    "quorum": {
+      "type": "object",
+      "required": [
+        "valid",
+        "proposals"
+      ],
+      "properties": {
+        "valid": {
+          "type": "boolean"
+        },
+        "proposals": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "validBallots": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "minimum": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "buildGate": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "skipped",
+            "passed",
+            "failed",
+            "unverified",
+            "blocked"
+          ]
+        }
+      }
+    },
+    "electedForeman": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "actingForeman": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "failover": {
+      "type": "boolean"
+    },
+    "fallback": {
+      "type": "boolean"
+    },
+    "parentRunId": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "mockRun": {
+      "type": "boolean"
+    },
+    "repairRequiresGate": {
+      "type": "boolean"
+    }
+  }
+}

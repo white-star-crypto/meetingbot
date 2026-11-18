@@ -1,0 +1,10 @@
+electron/startup.log
+meeting.config.local.json
+state/
+runs/
+runs-*/
+backup/
+build/
+dist/
+panel-screenshots/
+*.log

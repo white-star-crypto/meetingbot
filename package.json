@@ -1,0 +1,108 @@
+{
+  "name": "meetingbot",
+  "version": "1.0.0",
+  "description": "Multi-model design meetings with optional, permission-gated local Agent tools; the meeting core itself does not execute code.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "bin": {
+    "meetingbot": "./bin/meetingbot.mjs"
+  },
+  "main": "src/meeting.mjs",
+  "scripts": {
+    "test": "node tests/smoke.mjs && node tests/tally.test.mjs && node tests/roster.test.mjs && node tests/aliases.test.mjs && node tests/decision-audit.test.mjs && node tests/build-gate.test.mjs && node tests/gate-integration.test.mjs && node tests/failover.test.mjs && node tests/foreman-failure.test.mjs && node tests/mock-pacing.test.mjs && node tests/participant-status.test.mjs && node tests/cache.test.mjs && node tests/cache-meeting.test.mjs && node tests/multimodal.test.mjs && node tests/rounds.test.mjs && node tests/pr-review.test.mjs && node tests/mock-size.test.mjs && node tests/group-chat.test.mjs && node tests/tools-ssrf.test.mjs && node tests/providers-timeout.test.mjs && node tests/cli-json.test.mjs && node tests/mcp.test.mjs && node tests/mcp-agent.test.mjs && node tests/repair-success.test.mjs && node tests/repair-legacy.test.mjs && node tests/panel-auth.test.mjs && node tests/vision-fence.test.mjs && node tests/key-vault.test.mjs && node tests/python-sandbox.test.mjs && node tests/python-sandbox-escape.test.mjs && node tests/python-nonblocking.test.mjs && node tests/capability.test.mjs && node tests/provider-json.test.mjs && node tests/custom-provider.test.mjs && node tests/agent-approval.test.mjs && node tests/agent-resume-disabled.test.mjs && node tests/jobs-cancel.test.mjs && node tests/agent-session-capacity.test.mjs && node tests/electron-url-policy.test.mjs && node tests/workspace-bound-gate.test.mjs && node tests/delete-junction-backup.test.mjs && node tests/resume-partial-proposals.test.mjs && node tests/agent-presets.test.mjs && node tests/decision-ledger.test.mjs && node tests/ledger-presets-http.test.mjs && node tests/permissions.test.mjs && node tests/checkpoint-diff.test.mjs && node tests/checkpoint-http.test.mjs && node tests/decision-schema.test.mjs && node tests/bundle.test.mjs && node tests/session-store.test.mjs && node tests/tls.test.mjs && node tests/compare.test.mjs && node tests/ui-contract.test.mjs && node tests/data-root.test.mjs && node tests/data-root-protection.test.mjs && node tests/workspace-context.test.mjs && node tests/account-service.test.mjs && node tests/preferences.test.mjs && node tests/compare-history.test.mjs && node tests/plugin-state.test.mjs && node tests/plugin-catalog.test.mjs && node tests/plugin-catalog-http.test.mjs && node tests/memory-store.test.mjs && node tests/run-center.test.mjs && node tests/symlink-matrix.test.mjs && node tests/ui-wiring.test.mjs && node tests/run-resume-http.test.mjs && node tests/decision-ontology.test.mjs && node tests/external-skills.test.mjs && node tests/file-preview.test.mjs && node tests/decision-approval-http.test.mjs && node tests/approval-effective-mode.test.mjs && node tests/per-meeting-permission.test.mjs && node tests/manual-foreman.test.mjs && node tests/decision-approval.test.mjs && node tests/decision-approval-ui.test.mjs && node tests/bugfix-20261117.test.mjs",
+    "demo": "node bin/meetingbot.mjs start --brief examples/brief.md --config examples/config.mock.json --out runs --mock",
+    "app": "electron electron/main.cjs",
+    "app:dev": "electron electron/main.cjs",
+    "app:no-sandbox": "electron --no-sandbox electron/main.cjs",
+    "release:check": "node scripts/check-pack.mjs",
+    "test:e2e": "node tests/e2e/round4-e2e.mjs 9446 && node tests/e2e/round4-e2e2.mjs 9446 && node tests/e2e/round4-e2e3.mjs 9446 && node tests/e2e/round4-failure.mjs 9446"
+  },
+  "files": [
+    "bin",
+    "src",
+    "electron",
+    "examples",
+    "tests",
+    "public",
+    "docs",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "NOTICE.md",
+    "scripts",
+    ".npmignore",
+    "launch-app.ps1",
+    "MeetingBot.cmd",
+    "schemas"
+  ],
+  "devDependencies": {
+    "electron": "^36.9.5",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+    "appId": "com.heyi.app",
+    "productName": "合议",
+    "directories": {
+      "output": "release"
+    },
+    "asar": true,
+    "files": [
+      "bin/**/*",
+      "src/**/*",
+      "electron/**/*",
+      "public/**/*",
+      "examples/**/*",
+      "package.json",
+      "README.md",
+      "LICENSE",
+      "NOTICE.md",
+      "!electron/startup.log",
+      "!third_party/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "public/heyi.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "合议"
+    },
+    "extraMetadata": {
+      "main": "electron/main.cjs"
+    }
+  },
+  "exports": {
+    ".": "./src/meeting.mjs",
+    "./meeting": "./src/meeting.mjs",
+    "./panel": "./src/panel-server.mjs",
+    "./config": "./src/config.mjs",
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/white-star-crypto/meetingbot.git"
+  },
+  "homepage": "https://github.com/white-star-crypto/meetingbot#readme",
+  "bugs": {
+    "url": "https://github.com/white-star-crypto/meetingbot/issues"
+  }
+}

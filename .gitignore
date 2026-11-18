@@ -1,0 +1,35 @@
+# Local runtime state and secrets — never commit.
+state/
+runs/
+runs-*/
+feedback/
+panel-screenshots/
+backup/
+build/
+dist/
+release/
+node_modules/
+meeting.config.local.json
+electron/startup.log
+config/providers.vault.json
+config/providers.vault.key
+config/providers.vault.key.prev
+.env
+.env.*
+*.log
+*.zip
+*.lnk
+*.pem
+*.p12
+*.pfx
+pr-review-brief.md
+UX-AUDIT.md
+REVIEW-FIX-REPORT.md
+_visual-qa/
+creative/
+briefs/
+docs/UX-AUDIT-ROUND3.md
+
+# Local-only third-party, CC BY-NC; never ship
+third_party/
+

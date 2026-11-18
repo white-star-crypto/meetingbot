@@ -1,0 +1,200 @@
+{
+  "name": "example-mock-meeting",
+  "maxTokens": 1800,
+  "temperature": 0.6,
+  "outDir": "runs",
+  "selection": {
+    "count": 4,
+    "maxCostTier": 5
+  },
+  "roster": [
+    {
+      "id": "alpha",
+      "label": "Alpha",
+      "provider": "openai",
+      "baseUrl": "https://example.invalid/v1",
+      "model": "mock-a",
+      "enabled": true,
+      "tags": [
+        "code",
+        "architecture"
+      ],
+      "costTier": 2,
+      "qualityTier": 4
+    },
+    {
+      "id": "beta",
+      "label": "Beta",
+      "provider": "openai",
+      "baseUrl": "https://example.invalid/v1",
+      "model": "mock-b",
+      "enabled": true,
+      "tags": [
+        "design",
+        "architecture"
+      ],
+      "costTier": 1,
+      "qualityTier": 4
+    },
+    {
+      "id": "gamma",
+      "label": "Gamma",
+      "provider": "openai",
+      "baseUrl": "https://example.invalid/v1",
+      "model": "mock-c",
+      "enabled": true,
+      "tags": [
+        "design",
+        "experimental"
+      ],
+      "costTier": 3,
+      "qualityTier": 2
+    },
+    {
+      "id": "delta",
+      "label": "Delta",
+      "provider": "openai",
+      "baseUrl": "https://example.invalid/v1",
+      "model": "mock-d",
+      "enabled": true,
+      "tags": [
+        "design",
+        "minimal"
+      ],
+      "costTier": 1,
+      "qualityTier": 3
+    },
+    {
+      "id": "custom-hang-test",
+      "label": "Hang Test",
+      "provider": "openai",
+      "baseUrl": "http://127.0.0.1:57261/v1",
+      "model": "hang-1",
+      "apiKeyEnv": "hangtest",
+      "family": "custom",
+      "tags": [],
+      "enabled": true
+    },
+    {
+      "id": "custom-hang-test-2",
+      "label": "Hang Test",
+      "provider": "openai",
+      "baseUrl": "http://127.0.0.1:57673/v1",
+      "model": "hang-1",
+      "apiKeyEnv": "hangtest",
+      "family": "custom",
+      "tags": [],
+      "enabled": true
+    },
+    {
+      "id": "custom-hang-test-two",
+      "label": "Hang Test Two",
+      "provider": "openai",
+      "baseUrl": "http://127.0.0.1:57673/v1",
+      "model": "hang-2",
+      "apiKeyEnv": "hangtest2",
+      "family": "custom",
+      "tags": [],
+      "enabled": true
+    },
+    {
+      "id": "custom-hang-test-3",
+      "label": "Hang Test",
+      "provider": "openai",
+      "baseUrl": "http://127.0.0.1:60063/v1",
+      "model": "hang-1",
+      "apiKeyEnv": "hangtest",
+      "family": "custom",
+      "tags": [],
+      "enabled": true
+    },
+    {
+      "id": "custom-hang-test-two-2",
+      "label": "Hang Test Two",
+      "provider": "openai",
+      "baseUrl": "http://127.0.0.1:60063/v1",
+      "model": "hang-2",
+      "apiKeyEnv": "hangtest2",
+      "family": "custom",
+      "tags": [],
+      "enabled": true
+    },
+    {
+      "id": "custom-hang-bf",
+      "label": "Hang BF",
+      "provider": "openai",
+      "baseUrl": "http://127.0.0.1:61372/v1",
+      "model": "hang-bf",
+      "apiKeyEnv": "hangbf",
+      "family": "custom",
+      "tags": [],
+      "enabled": true
+    },
+    {
+      "id": "custom-hang-bf-2",
+      "label": "Hang BF",
+      "provider": "openai",
+      "baseUrl": "http://127.0.0.1:62191/v1",
+      "model": "hang-bf",
+      "apiKeyEnv": "hangbf",
+      "family": "custom",
+      "tags": [],
+      "enabled": true
+    },
+    {
+      "id": "custom-hang-bf-3",
+      "label": "Hang BF",
+      "provider": "openai",
+      "baseUrl": "http://127.0.0.1:64127/v1",
+      "model": "hang-bf",
+      "apiKeyEnv": "hangbf",
+      "family": "custom",
+      "tags": [],
+      "enabled": true
+    },
+    {
+      "id": "custom-hang-bf-4",
+      "label": "Hang BF",
+      "provider": "openai",
+      "baseUrl": "http://127.0.0.1:51417/v1",
+      "model": "hang-bf",
+      "apiKeyEnv": "hangbf",
+      "family": "custom",
+      "tags": [],
+      "enabled": true
+    },
+    {
+      "id": "custom-hang-bf-5",
+      "label": "Hang BF",
+      "provider": "openai",
+      "baseUrl": "http://127.0.0.1:51799/v1",
+      "model": "hang-bf",
+      "apiKeyEnv": "hangbf",
+      "family": "custom",
+      "tags": [],
+      "enabled": true
+    },
+    {
+      "id": "custom-hang-bf-6",
+      "label": "Hang BF",
+      "provider": "openai",
+      "baseUrl": "http://127.0.0.1:52163/v1",
+      "model": "hang-bf",
+      "apiKeyEnv": "hangbf",
+      "family": "custom",
+      "tags": [],
+      "enabled": true
+    },
+    {
+      "id": "custom-hang-bf-7",
+      "label": "Hang BF",
+      "provider": "openai",
+      "baseUrl": "http://127.0.0.1:52596/v1",
+      "model": "hang-bf",
+      "apiKeyEnv": "hangbf",
+      "family": "custom",
+      "tags": [],
+      "enabled": true
+    }
+  ]
+}
