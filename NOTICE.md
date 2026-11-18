@@ -10,4 +10,4 @@ MeetingBot is a standalone meeting protocol.
 
 ## License
 
-MeetingBot is source-available under the PolyForm Noncommercial License 1.0.0. See `LICENSE`. Commercial use requires a separate written license; see `COMMERCIAL-LICENSE.md`.
+MeetingBot is source-available under the MeetingBot Community License 1.0.0. Enterprise, internal, client-project, and commercial use as a tool is permitted. Content created with the Software belongs to the user. Reselling the Software or a Derivative Work, or repackaging it for sale, is prohibited. See `LICENSE` and `COMMERCIAL-LICENSE.md`.

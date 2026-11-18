@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Multi-model design meetings with optional, permission-gated local Agent tools; the meeting core itself does not execute code.",
   "type": "module",
-  "license": "PolyForm-Noncommercial-1.0.0",
+  "license": "SEE LICENSE IN LICENSE",
   "engines": {
     "node": ">=20.11.0"
   },
@@ -32,6 +32,7 @@
     "CHANGELOG.md",
     "LICENSE",
     "NOTICE.md",
+    "COMMERCIAL-LICENSE.md",
     "scripts",
     ".npmignore",
     "launch-app.ps1",
@@ -59,6 +60,7 @@
       "README.md",
       "LICENSE",
       "NOTICE.md",
+      "COMMERCIAL-LICENSE.md",
       "!electron/startup.log",
       "!third_party/**/*"
     ],

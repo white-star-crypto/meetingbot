@@ -2,8 +2,8 @@
 
 多模型 AI 会议：多个模型独立提案、匿名互评、投票，最后由主 Bot 汇总成一份可执行的决定。Windows 本地优先，源码公开。
 
-> **协议：PolyForm Noncommercial License 1.0.0**
-> 非商业用途免费；**商业使用需要单独书面授权**。这不是 MIT，也不是 OSI 开源协议。详见 [LICENSE](LICENSE) 和 [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md)。
+> **协议：MeetingBot Community License 1.0.0**
+> 允许个人、企业、团队使用，包含商业项目、客户交付和二次创作；**禁止倒卖软件/源码、轻微修改后重新打包出售，或作为竞品托管服务**。使用平台创作的内容归使用者。不是 OSI 开源协议。详见 [LICENSE](LICENSE) 和 [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md)。
 
 ## 中文简介
 
@@ -883,4 +883,4 @@ This is not proof that every meeting saves money. It is a measurable tradeoff.
 
 ## License
 
-Source-available under the **PolyForm Noncommercial License 1.0.0**. Personal, research, educational, charitable, public-sector, and internal noncommercial use is permitted. Commercial use requires a separate written license from the copyright holder. This is not an OSI-approved open-source license. See [LICENSE](LICENSE) and [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md).
+Source-available under the **MeetingBot Community License 1.0.0**. Personal, enterprise, internal, client-project, and commercial use as a tool are permitted. Content you create with the Software belongs to you. Reselling the Software or a Derivative Work, or repackaging it for sale, is prohibited. This is not an OSI-approved open-source license. See [LICENSE](LICENSE) and [COMMERCIAL-LICENSE.md](COMMERCIAL-LICENSE.md).
